@@ -16,6 +16,7 @@ import {
   CheckSquare,
   Palette,
   ArrowRight,
+  Recycle,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -40,6 +41,32 @@ export default function Portfolio() {
 
   const projects = [
     {
+      title: "WasteLink",
+      emoji: "♻️",
+      description:
+        "Kenya's recycling marketplace connecting waste sellers with nearby recyclers, powered by ML pricing and AI image verification.",
+      detailedDescription:
+        "Full-stack recycling marketplace with ML-powered dynamic pricing, computer vision waste classification, and geolocation-based recycler matching.",
+      tech: ["React", "Supabase", "Python", "Flask", "Machine Learning", "Computer Vision", "Leaflet.js"],
+      features: [
+        "AI image verification for waste classification",
+        "ML-powered dynamic pricing engine",
+        "Geolocation-based recycler matching with Leaflet maps",
+        "Seller & Recycler role auth via Supabase",
+      ],
+      liveLink: "https://wastelink-five.vercel.app/",
+      githubLink: "https://github.com/yvonnegat/wastelink",
+      extraLinks: [
+        { label: "Backend", url: "https://github.com/yvonnegat/wastelink-backend-" },
+        { label: "ML Model", url: "https://github.com/yvonnegat/wastelinkml" },
+      ],
+      icon: Recycle,
+      color: "bg-emerald-200",
+      accent: "bg-emerald-500",
+      shape: "square",
+      featured: true,
+    },
+    {
       title: "Library Management System",
       emoji: "📚",
       description:
@@ -54,11 +81,13 @@ export default function Portfolio() {
         "Admin dashboard for library management",
       ],
       liveLink: "https://yvonnega2wiri.pythonanywhere.com/",
-      githubLink: null, // Add if you have a GitHub repo
+      githubLink: null,
+      extraLinks: [],
       icon: BookOpen,
       color: "bg-pink-200",
       accent: "bg-pink-400",
       shape: "circle",
+      featured: false,
     },
     {
       title: "MEDIGO Healthcare Platform",
@@ -76,10 +105,12 @@ export default function Portfolio() {
       ],
       liveLink: "https://yvonnegat.github.io/MEDIGO/",
       githubLink: "https://github.com/yvonnegat/MEDIGO",
+      extraLinks: [],
       icon: Smartphone,
       color: "bg-blue-200",
       accent: "bg-blue-400",
       shape: "triangle",
+      featured: false,
     },
     {
       title: "Smart Parking System",
@@ -97,10 +128,12 @@ export default function Portfolio() {
       ],
       liveLink: "https://yvonnegat.github.io/cypark-smartparking/",
       githubLink: "https://github.com/yvonnegat/cypark-smartparking",
+      extraLinks: [],
       icon: ParkingCircle,
       color: "bg-green-200",
       accent: "bg-green-400",
       shape: "square",
+      featured: false,
     },
     {
       title: "Recipe Finder App",
@@ -117,10 +150,12 @@ export default function Portfolio() {
       ],
       liveLink: "https://yvonnegat.github.io/recipeFinder/",
       githubLink: "https://github.com/yvonnegat/recipeFinder",
+      extraLinks: [],
       icon: Utensils,
       color: "bg-orange-200",
       accent: "bg-orange-400",
       shape: "circle",
+      featured: false,
     },
     {
       title: "ToDo Manager",
@@ -136,10 +171,12 @@ export default function Portfolio() {
       ],
       liveLink: "https://yvonnegat.github.io/ToDo_App/",
       githubLink: "https://github.com/yvonnegat/ToDo_App",
+      extraLinks: [],
       icon: CheckSquare,
       color: "bg-purple-200",
       accent: "bg-purple-400",
       shape: "triangle",
+      featured: false,
     },
     {
       title: "Elevator Control System",
@@ -156,10 +193,12 @@ export default function Portfolio() {
       ],
       liveLink: null,
       githubLink: "https://github.com/yvonnegat/Elevator-System-",
+      extraLinks: [],
       icon: Code,
       color: "bg-cyan-200",
       accent: "bg-cyan-400",
       shape: "square",
+      featured: false,
     },
     {
       title: "Car Inventory System",
@@ -177,10 +216,12 @@ export default function Portfolio() {
       ],
       liveLink: null,
       githubLink: "https://github.com/yvonnegat/Car-Inventory-System",
+      extraLinks: [],
       icon: Car,
       color: "bg-yellow-200",
       accent: "bg-yellow-400",
       shape: "triangle",
+      featured: false,
     },
     {
       title: "Inventory Management System",
@@ -198,10 +239,12 @@ export default function Portfolio() {
       ],
       liveLink: null,
       githubLink: "https://github.com/yvonnegat/inventory-management",
+      extraLinks: [],
       icon: Database,
       color: "bg-emerald-200",
       accent: "bg-emerald-400",
       shape: "square",
+      featured: false,
     },
     {
       title: "Acrylic Alchemy Shop",
@@ -217,10 +260,12 @@ export default function Portfolio() {
       ],
       liveLink: null,
       githubLink: "https://github.com/yvonnegat/Acrylic-alchemy",
+      extraLinks: [],
       icon: Palette,
       color: "bg-rose-200",
       accent: "bg-rose-400",
       shape: "circle",
+      featured: false,
     },
     {
       title: "Weather Forecast App",
@@ -236,10 +281,12 @@ export default function Portfolio() {
       ],
       liveLink: null,
       githubLink: "https://github.com/yvonnegat/weather-app",
+      extraLinks: [],
       icon: Cloud,
       color: "bg-indigo-200",
       accent: "bg-indigo-400",
       shape: "square",
+      featured: false,
     },
   ]
 
@@ -252,6 +299,11 @@ export default function Portfolio() {
     { name: "Node.js", level: 75, color: "bg-cyan-300" },
     { name: "SQL", level: 80, color: "bg-rose-300" },
     { name: "Git", level: 85, color: "bg-yellow-300" },
+    { name: "Flask", level: 80, color: "bg-emerald-300" },
+    { name: "Supabase", level: 75, color: "bg-teal-300" },
+    { name: "Machine Learning", level: 70, color: "bg-violet-300" },
+    { name: "Docker", level: 75, color: "bg-indigo-300" },
+    { name: "MySQL", level: 80, color: "bg-pink-400" },
   ]
 
   const getShapeClasses = (shape: string) => {
@@ -443,87 +495,146 @@ export default function Portfolio() {
               <h2 className="text-4xl md:text-5xl font-extralight text-gray-900">Projects</h2>
               <div className="w-3 h-3 bg-orange-400 transform rotate-45" />
             </div>
+            <p className="text-lg font-light text-gray-600 mt-6 max-w-2xl mx-auto">
+              Explore a selection of my work across web development, machine learning, and full-stack applications
+            </p>
           </div>
 
+          {/* Featured Project */}
+          {projects.filter(p => p.featured).map((project) => (
+            <div key={project.title} className="mb-20 max-w-5xl mx-auto">
+              <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl p-12 shadow-lg">
+                <div className="flex items-start gap-6 mb-8">
+                  <div className="text-5xl">{project.emoji}</div>
+                  <div className="flex-1">
+                    <h3 className="text-4xl font-extralight text-gray-900 mb-2">{project.title}</h3>
+                    <p className="text-gray-600 font-light leading-relaxed mb-6">{project.detailedDescription}</p>
+                    
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-gray-700 mb-3 uppercase tracking-wide">Tech Stack</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tech.map((t) => (
+                          <span key={t} className="px-3 py-1 bg-emerald-200 text-emerald-800 rounded-full text-sm font-light">
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-gray-700 mb-3 uppercase tracking-wide">Features</h4>
+                      <ul className="space-y-2">
+                        {project.features.map((f) => (
+                          <li key={f} className="text-gray-600 font-light flex items-start gap-3">
+                            <span className="text-emerald-500 mt-1">✓</span>
+                            <span>{f}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="flex gap-4 flex-wrap">
+                      {project.liveLink && (
+                        <Button
+                          className="bg-emerald-500 hover:bg-emerald-600 text-white font-light px-6 py-2 rounded-full flex items-center gap-2"
+                          onClick={() => window.open(project.liveLink, "_blank")}
+                        >
+                          <ExternalLink size={16} />
+                          View Live App
+                        </Button>
+                      )}
+                      {project.githubLink && (
+                        <Button
+                          variant="outline"
+                          className="border-emerald-500 text-emerald-700 hover:bg-emerald-50 rounded-full bg-transparent font-light"
+                          onClick={() => window.open(project.githubLink, "_blank")}
+                        >
+                          <Github size={16} className="mr-2" />
+                          View Code
+                        </Button>
+                      )}
+                      {project.extraLinks && project.extraLinks.map((link) => (
+                        <Button
+                          key={link.label}
+                          variant="outline"
+                          className="border-emerald-300 text-emerald-600 hover:bg-emerald-50 rounded-full bg-transparent font-light text-xs"
+                          onClick={() => window.open(link.url, "_blank")}
+                        >
+                          {link.label}
+                        </Button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+
+          {/* Regular Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => {
+            {projects.filter(p => !p.featured).map((project) => {
               const Icon = project.icon
               return (
                 <div
-                  key={index}
-                  className="bg-gray-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 relative group"
+                  key={project.title}
+                  className="bg-gray-50 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 relative group"
                 >
-                  <div className="flex items-start justify-between mb-6">
-                    <div
-                      className={`w-16 h-16 ${project.color} ${getShapeClasses(project.shape)} flex items-center justify-center shadow-lg`}
-                    >
-                      <Icon className="h-8 w-8 text-gray-700" />
-                    </div>
-                    <div className="text-2xl">{project.emoji}</div>
+                  <div className={`h-40 ${project.color} flex items-center justify-center relative overflow-hidden`}>
+                    <div className="text-6xl opacity-80">{project.emoji}</div>
+                    <div className="absolute w-20 h-20 bg-white opacity-10 rounded-full" />
                   </div>
 
-                  <h3 className="text-xl font-light text-gray-900 mb-3">{project.title}</h3>
-                  <p className="text-gray-600 font-light mb-4 leading-relaxed">{project.detailedDescription}</p>
+                  <div className="p-8">
+                    <h3 className="text-2xl font-extralight text-gray-900 mb-3">{project.title}</h3>
+                    <p className="text-gray-600 font-light text-sm mb-6 leading-relaxed">{project.description}</p>
 
-                  <div className="mb-4">
-                    <h4 className="text-sm font-medium text-gray-700 mb-2">🔧 Tech Stack:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech, techIndex) => (
-                        <span
-                          key={techIndex}
-                          className="px-3 py-1 bg-white rounded-full text-xs font-light text-gray-600 border border-gray-200"
+                    <div className="mb-6">
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.tech.slice(0, 3).map((t) => (
+                          <span key={t} className={`px-2 py-1 ${project.accent} text-white rounded-full text-xs font-light`}>
+                            {t}
+                          </span>
+                        ))}
+                        {project.tech.length > 3 && (
+                          <span className="px-2 py-1 bg-gray-300 text-gray-700 rounded-full text-xs font-light">
+                            +{project.tech.length - 3}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="flex gap-2">
+                      {project.liveLink ? (
+                        <Button
+                          size="sm"
+                          className={`flex-1 ${project.accent} hover:opacity-90 text-white font-light rounded-full text-sm`}
+                          onClick={() => window.open(project.liveLink, "_blank")}
                         >
-                          {tech}
-                        </span>
-                      ))}
+                          <ExternalLink size={14} className="mr-1" />
+                          Live
+                        </Button>
+                      ) : (
+                        <Button
+                          size="sm"
+                          disabled
+                          className="flex-1 bg-gray-200 text-gray-600 font-light rounded-full text-sm"
+                        >
+                          Coming Soon
+                        </Button>
+                      )}
+                      {project.githubLink && (
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className={`flex-1 border-2 text-gray-700 hover:${project.color} rounded-full text-sm font-light bg-transparent`}
+                          onClick={() => window.open(project.githubLink, "_blank")}
+                        >
+                          <Github size={14} className="mr-1" />
+                          Code
+                        </Button>
+                      )}
                     </div>
                   </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-sm font-medium text-gray-700 mb-2">✨ Features:</h4>
-                    <ul className="text-xs text-gray-600 space-y-1">
-                      {project.features.slice(0, 3).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start">
-                          <span className="text-gray-400 mr-2">•</span>
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="space-y-3">
-                    {project.liveLink && (
-                      <Button
-                        className={`w-full ${project.accent} hover:opacity-80 text-white font-light rounded-full shadow-lg`}
-                        onClick={() => window.open(project.liveLink, "_blank")}
-                      >
-                        <ExternalLink className="mr-2 h-4 w-4" />🔗 View Live App
-                      </Button>
-                    )}
-                    {project.githubLink && (
-                      <Button
-                        variant="outline"
-                        className="w-full border-gray-200 text-gray-700 hover:bg-gray-50 rounded-full font-light bg-transparent"
-                        onClick={() => window.open(project.githubLink, "_blank")}
-                      >
-                        <Github className="mr-2 h-4 w-4" />💻 View Code
-                      </Button>
-                    )}
-                    {!project.liveLink && !project.githubLink && (
-                      <Button
-                        variant="outline"
-                        className="w-full border-gray-200 text-gray-700 hover:bg-gray-50 rounded-full font-light bg-transparent"
-                        disabled
-                      >
-                        Coming Soon
-                      </Button>
-                    )}
-                  </div>
-
-                  {/* Decorative element */}
-                  <div
-                    className={`absolute -bottom-2 -right-2 w-6 h-6 ${project.accent} rounded-full opacity-0 group-hover:opacity-60 transition-opacity`}
-                  />
                 </div>
               )
             })}
