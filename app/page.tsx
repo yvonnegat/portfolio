@@ -67,6 +67,29 @@ export default function Portfolio() {
       featured: true,
     },
     {
+      title: "Ahadi — Public Register of Promises",
+      emoji: "A",
+      description:
+        "A civic accountability register that tracks public promises against funding, reported completion, and residents' lived experience.",
+      detailedDescription:
+        "A public-facing civic register designed to make county development promises easier to follow, compare, and understand through evidence-led case files.",
+      tech: ["HTML", "CSS", "JavaScript", "Node.js", "Render"],
+      features: [
+        "County, constituency, and ward-based promise discovery",
+        "Evidence-focused public case files",
+        "Clear distinction between reported completion and resident experience",
+        "Responsive civic information interface",
+      ],
+      liveLink: "https://ahadi-ow00.onrender.com/index.html",
+      githubLink: "https://github.com/yvonnegat/ahadi",
+      extraLinks: [],
+      icon: Code,
+      color: "bg-amber-200",
+      accent: "bg-amber-500",
+      shape: "square",
+      featured: false,
+    },
+    {
       title: "Library Management System",
       emoji: "📚",
       description:
